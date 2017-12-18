@@ -7,6 +7,10 @@ __metaclass__ = type
 import os
 import sys
 import tempfile
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, basedir + '/../../../modules')
+
 import yaml
 
 from collections import namedtuple

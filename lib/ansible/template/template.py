@@ -19,12 +19,11 @@
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
+import sys
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 sys.path.insert(0, basedir + '/../../../modules')
-from get_GitList import List
-
 import jinja2
 
 __all__ = ['AnsibleJ2Template']

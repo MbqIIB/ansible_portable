@@ -17,6 +17,7 @@ from ansible.module_utils.six import string_types
 from ansible.config.manager import ConfigManager, ensure_type, get_ini_config_value
 
 import os
+import sys
 basedir = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, basedir + '/../../modules')
 
