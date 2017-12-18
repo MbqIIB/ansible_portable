@@ -8,13 +8,19 @@ __metaclass__ = type
 import os  # used to set lang and for backwards compat get_config
 
 from ast import literal_eval
-from jinja2 import Template
+
 from string import ascii_letters, digits
 
 from ansible.module_utils._text import to_text
 from ansible.module_utils.parsing.convert_bool import boolean, BOOLEANS_TRUE
 from ansible.module_utils.six import string_types
 from ansible.config.manager import ConfigManager, ensure_type, get_ini_config_value
+
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, basedir + '/../../modules')
+
+from jinja2 import Template
 
 
 def _deprecated(msg):
